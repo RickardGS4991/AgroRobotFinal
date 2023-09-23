@@ -1,0 +1,2 @@
+roslaunch image_detect_pkg my_robot.launch robot_model:=locobot_wx250s use_actual:=true dof:=6 use_python_interface:=true 
+
