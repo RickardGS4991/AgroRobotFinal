@@ -11,3 +11,7 @@ rostopic echo nombre_del_ropico <--- Si queremos visualizar que està mandando n
 ejemplo: rostopic echo /locobot/camera/color/image_raw <<--- Desplegara todos los valores de la imagen en una matrix 
 
 El lobobot tiene dos caamaras: uno de profundidas y otro RGB. El de profundidas parece estar en gris y begro, pero no es asi.
+
+Se tubo que crear un nuevo paquete para este proyecto junto con un nuevo lanzador para que pudiera usarse tanto la base, como la camara RGB y el brazo. Para la comunicaciòn de la libreria OpenCV y la camara RGB, es necesario hacer una suscricion a los datos que lanza la camara, para que la libera los interprete y los muestre. En el codigo my_photo.py estan las suscripciones y la libreria a usarse para esta conexion.
+
+Recomendacion: crear nodos (archivos) diferente para cada movimientos del robot, y que de esta manera, no cause un error. Al final, crear un nodo principal en done estos nodos sean importados.
